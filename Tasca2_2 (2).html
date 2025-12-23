@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="alexmaldonado120905@gmail.com" method="post" name="formulari_usuari" id="formulari_usuari" onsubmit="return validar()">
+    <label for="nom">Nom:</label>
+    <input type="text" name="nom" id="nom" >
+    <br>
+    <label for="primer_llinatge">Primer Llinatge:</label>
+    <input type="text" name="primer_llinatge" id="primer_llinatge">
+    <br>
+    <label for="segon_llinatge">Segon Llinatge:</label>
+    <input type="text" name="segon_llinatge" id="segon_llinatge"/>
+    <br>
+    <label for="dni">DNI:</label>
+    <input type="text" name="dni" id="dni" >
+    <br>
+    <label for="correu">Adraça de correu:</label>
+    <input type="email" name="email" id="email" >
+    <br>
+    <label for="edat">Data de naixament:</label>
+    <input type="date" name="date" id="edat" >
+    <br>
+    <label for="illa">Selecciona la teva illa:</label>
+    <select type="option value" nama="option" id="illa" >
+        <option value="Selecciona">--Selecciona--</option>
+        <option value="Menorca">Menorca</option>
+        <option value="Mallorca">Mallorca</option>
+        <option value="Ibiza">Ibiza</option>
+    </select>
+    <br>
+    <label for="donar">Quantitat a donar:</label>
+    <input type="text" name="name" id="donar"/>
+    <br>
+    <input type="submit" value="enviar">
+    <input type="reset"  value="reiniciar">
+    <script>
+         function validar(){
+            var nom = document.forms["formulari_usuari"]["nom"].value;
+            if (nom.length < 3 ){
+                alert("El camp de nom està buid o el seu nom es menor a 3 letres!")
+                return false;
+            }
+            return true;
+            
+            var primer_llinatge = document.forms["formulari_usuari"]["primer_llinatge"].value;
+            if (primer_llinatge.length < 3 ){
+                alert("El camp de nom està buid o el seu nom es menor a 3 letres!")
+                return false;
+            }
+            return true;
+         }
+    </script>
+</form>
+</body>
+</html>
